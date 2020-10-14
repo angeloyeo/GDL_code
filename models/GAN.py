@@ -208,7 +208,7 @@ class GAN():
         self.set_trainable(self.discriminator, False)
 
         model_input = Input(shape=(self.z_dim,), name='model_input')
-        model_output = self.discriminator(self.generator(model_input))
+        model_output = self.discriminator(self.generator(model_input)) # GENERATOR로 input을 만들어서 discriminator를 출력하도록 하므로 discriminator만 optimize 함.
         self.model = Model(model_input, model_output)
 
         self.model.compile(optimizer=self.get_opti(self.generator_learning_rate) , loss='binary_crossentropy', metrics=['accuracy'])
