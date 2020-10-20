@@ -53,7 +53,7 @@ AE = load_model(Autoencoder, RUN_FOLDER)
 
 
 n_to_show = 10
-np.random.seed(88)
+np.random.seed(15)
 example_idx = np.random.choice(range(len(x_test)), n_to_show)
 example_images = x_test[example_idx]
 
