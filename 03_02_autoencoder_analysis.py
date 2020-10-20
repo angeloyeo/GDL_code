@@ -144,7 +144,7 @@ for i in range(grid_size*grid_depth):
 figsize = 10
 
 plt.figure(figsize=(figsize, figsize))
-plt.scatter(z_points[:, 0] , z_points[:, 1], cmap='rainbow', c=example_labels, alpha=0.5, s=2)
+plt.scatter(z_points[:, 0] , z_points[:, 1], cmap='rainbow', c=example_labels, alpha=0.5, s=20)
 plt.colorbar()
 
 plt.show()
